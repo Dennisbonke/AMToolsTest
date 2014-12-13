@@ -1,0 +1,19 @@
+itemGroup.advancedmachines=Advanced Machines
+
+tile.CopperOre.name=Copper Ore
+tile.LeadOre.name=Lead Ore
+tile.TinOre.name=Tin Ore
+tile.SilverOre.name=Silver Ore
+tile.CopperBlock.name=Copper Block
+tile.SilverBlock.name=Silver Block
+tile.LeadBlock.name=Lead Block
+tile.TinBlock.name=Tin Block
+
+item.CopperIngot.name=Copper Ingot
+item.TinIngot.name=Tin Ingot
+item.SilverIngot.name=Silver Ingot
+item.LeadIngot.name=Lead Ingot
+item.WoodenGear.name=Wooden Gear
+item.StoneGear.name=Cobblestone Gear
+item.IronGear.name=Iron Gear
+item.CoalCoke.name=Coal Coke
