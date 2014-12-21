@@ -39,7 +39,7 @@ public class AMWorldGen implements IWorldGenerator{
         this.addOreSpawn(AdvancedMachines.oreTinOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
         this.addOreSpawn(AdvancedMachines.oreSilverOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
         this.addOreSpawn(AdvancedMachines.oreLeadOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
-        //this.addOreSpawn(AdvancedMachines.oreTopazOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
+        this.addOreSpawn(AdvancedMachines.oreTopazOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
     }
 
     private void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {

@@ -1,19 +1,29 @@
 itemGroup.advancedmachines=Advanced Machines
 
+//Blocks
+//Ores
 tile.CopperOre.name=Copper Ore
 tile.LeadOre.name=Lead Ore
 tile.TinOre.name=Tin Ore
 tile.SilverOre.name=Silver Ore
+tile.TopazOre.name=Topaz Ore
+//StorageBlocks
 tile.CopperBlock.name=Copper Block
 tile.SilverBlock.name=Silver Block
 tile.LeadBlock.name=Lead Block
 tile.TinBlock.name=Tin Block
-
+tile.TopazBlock.name=Topaz Block
+//Items
+//Ingots
 item.CopperIngot.name=Copper Ingot
 item.TinIngot.name=Tin Ingot
 item.SilverIngot.name=Silver Ingot
 item.LeadIngot.name=Lead Ingot
+//Gems
+item.Topaz.name=Topaz
+//Gears
 item.WoodenGear.name=Wooden Gear
 item.StoneGear.name=Cobblestone Gear
 item.IronGear.name=Iron Gear
+//Fuel
 item.CoalCoke.name=Coal Coke
