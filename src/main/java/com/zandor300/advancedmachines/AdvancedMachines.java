@@ -1,6 +1,7 @@
 package com.zandor300.advancedmachines;
 
 import com.zandor300.advancedmachines.blocks.*;
+import com.zandor300.advancedmachines.handler.FuelHandler;
 import com.zandor300.advancedmachines.items.DBItems;
 import com.zandor300.advancedmachines.items.Wrench;
 import com.zandor300.advancedmachines.worldgen.AMWorldGen;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -36,6 +38,13 @@ public class AdvancedMachines {
     public static Item itemTopaz;
     //Tools
     public static Item itemWrench;
+    //Fuels
+    public static Item itemCoalCoke;
+    public static Item itemTreePitch;
+    //Gears
+    public static Item itemWoodenGear;
+    public static Item itemStoneGear;
+    public static Item itemIronGear;
     //Blocks
     //Ores
     public static Block oreCopperOre;
@@ -83,6 +92,13 @@ public class AdvancedMachines {
         itemTopaz = new DBItems().setUnlocalizedName("Topaz");
         //Tools
         itemWrench = new Wrench().setUnlocalizedName("Wrench");
+        //Fuels
+        itemTreePitch = new DBItems().setUnlocalizedName("TreePitch");
+        itemCoalCoke = new DBItems().setUnlocalizedName("CoalCoke");
+        //Gears
+        itemWoodenGear = new DBItems().setUnlocalizedName("WoodenGear");
+        itemStoneGear = new DBItems().setUnlocalizedName("StoneGear");
+        itemIronGear = new DBItems().setUnlocalizedName("IronGear");
         //RegisterStuff
         //Blocks
         //Ores
@@ -107,11 +123,21 @@ public class AdvancedMachines {
         GameRegistry.registerItem(itemTopaz, "Topaz");
         //Tools
         GameRegistry.registerItem(itemWrench, "Wrench");
+        //Fuels
+        GameRegistry.registerItem(itemCoalCoke, "CoalCoke");
+        GameRegistry.registerItem(itemTreePitch, "TreePitch");
+        //Gears
+        GameRegistry.registerItem(itemWoodenGear, "WoodenGear");
+        GameRegistry.registerItem(itemStoneGear, "StoneGear");
+        GameRegistry.registerItem(itemIronGear, "IronGear");
         //WorldGen
         GameRegistry.registerWorldGenerator(eventWorldGen, 0);
     }
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event){
+        //Handler
+        //FuelHandler
+        GameRegistry.registerFuelHandler(new FuelHandler());
         //Crafting
         //Shaped
         //StorageBlocks
@@ -122,6 +148,10 @@ public class AdvancedMachines {
         GameRegistry.addRecipe(new ItemStack(blockTopazBlock), new Object[]{"TTT", "TTT", "TTT", 'T', itemTopaz});
         //Tools
         GameRegistry.addRecipe(new ItemStack(itemWrench), new Object[]{"I I", "T", " I ", 'I', Items.iron_ingot, 'T', itemTinIngot});
+        //Gears
+        GameRegistry.addRecipe(new ItemStack(itemWoodenGear), new Object[]{" S ", "S S", " S ", 'S', Items.stick});
+        GameRegistry.addRecipe(new ItemStack(itemStoneGear), new Object[]{" S ", "SWS", " S ", 'S', Blocks.cobblestone, 'W', itemWoodenGear});
+        GameRegistry.addRecipe(new ItemStack(itemIronGear), new Object[]{" I ", "ISI", " I ", 'I', Items.iron_ingot, 'S', itemStoneGear});
         //Shapeless
         //StorageBlocks
         GameRegistry.addShapelessRecipe(new ItemStack(itemCopperIngot, 9), new Object[]{blockCopperBlock});
