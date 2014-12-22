@@ -25,5 +25,7 @@ item.Topaz.name=Topaz
 item.WoodenGear.name=Wooden Gear
 item.StoneGear.name=Cobblestone Gear
 item.IronGear.name=Iron Gear
+//Tools
+item.Wrench.name=Wrench
 //Fuel
 item.CoalCoke.name=Coal Coke

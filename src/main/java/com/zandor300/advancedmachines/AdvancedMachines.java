@@ -2,6 +2,7 @@ package com.zandor300.advancedmachines;
 
 import com.zandor300.advancedmachines.blocks.*;
 import com.zandor300.advancedmachines.items.DBItems;
+import com.zandor300.advancedmachines.items.Wrench;
 import com.zandor300.advancedmachines.worldgen.AMWorldGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -32,6 +34,8 @@ public class AdvancedMachines {
     public static Item itemLeadIngot;
     //Gems
     public static Item itemTopaz;
+    //Tools
+    public static Item itemWrench;
     //Blocks
     //Ores
     public static Block oreCopperOre;
@@ -77,6 +81,8 @@ public class AdvancedMachines {
         itemLeadIngot = new DBItems().setUnlocalizedName("LeadIngot");
         //Gems
         itemTopaz = new DBItems().setUnlocalizedName("Topaz");
+        //Tools
+        itemWrench = new Wrench().setUnlocalizedName("Wrench");
         //RegisterStuff
         //Blocks
         //Ores
@@ -99,6 +105,8 @@ public class AdvancedMachines {
         GameRegistry.registerItem(itemLeadIngot, "LeadIngot");
         //Gems
         GameRegistry.registerItem(itemTopaz, "Topaz");
+        //Tools
+        GameRegistry.registerItem(itemWrench, "Wrench");
         //WorldGen
         GameRegistry.registerWorldGenerator(eventWorldGen, 0);
     }
@@ -112,6 +120,8 @@ public class AdvancedMachines {
         GameRegistry.addRecipe(new ItemStack(blockSilverBlock), new Object[]{"SSS", "SSS", "SSS", 'S', itemSilverIngot});
         GameRegistry.addRecipe(new ItemStack(blockTinBlock), new Object[]{"TTT", "TTT", "TTT", 'T', itemTinIngot});
         GameRegistry.addRecipe(new ItemStack(blockTopazBlock), new Object[]{"TTT", "TTT", "TTT", 'T', itemTopaz});
+        //Tools
+        GameRegistry.addRecipe(new ItemStack(itemWrench), new Object[]{"I I", "T", " I ", 'I', Items.iron_ingot, 'T', itemTinIngot});
         //Shapeless
         //StorageBlocks
         GameRegistry.addShapelessRecipe(new ItemStack(itemCopperIngot, 9), new Object[]{blockCopperBlock});
